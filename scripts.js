@@ -34,18 +34,23 @@ function getHumanChoice() {
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === "Rock" && computerChoice === "Scissors") {
-        console.log("You win this round!\n" + humanChoice + " beats " + computerChoice + "\nPoint for you");
+        console.log("You win this round!");
+        console.log(humanChoice + " beats " + computerChoice + " - Point for you");
         humanScore++;
     } else if (humanChoice === "Paper" && computerChoice === "Rock") {
-        console.log("You win this round!\n" + humanChoice + " beats " + computerChoice + "\nPoint for you");
+        console.log("You win this round!");
+        console.log(humanChoice + " beats " + computerChoice + " - Point for you");
         humanScore++;
     } else if (humanChoice === "Scissors" && computerChoice === "Paper") {
-        console.log("You win this round!\n" + humanChoice + " beats " + computerChoice + "\nPoint for you");
+        console.log("You win this round!");
+        console.log(humanChoice + " beats " + computerChoice + " - Point for you");
         humanScore++;
     } else if (humanChoice === computerChoice) {
-        console.log("Draw!" + "\nNo points were designated");
+        console.log("Draw!");
+        console.log("No points were designated");
     } else {
-        console.log("Computer wins this round!\n" + computerChoice + " beats " + humanChoice + " \nPoint for Computer");
+        console.log("Computer wins this round!");
+        console.log(computerChoice + " beats " + humanChoice + " - Point for Computer")
         computerScore++;
     }
     console.log("Current match result: " + humanScore + " - " + computerScore + "\n\n");
@@ -54,6 +59,7 @@ function playRound(humanChoice, computerChoice) {
 function playGame() {
     console.log("Rock Paper Scissors Game!\n\n");
     for (let i = 0; i < 5; i++) {
+        console.log("Round " + (i + 1) + "!\n\n");
         let humanSelection = getHumanChoice();
         let computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection);
