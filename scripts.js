@@ -1,57 +1,58 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     let number = Math.floor(Math.random() * 3);
 
     if (number === 0) {
-        console.log("C0mput3rs race: rock")
-        return "rock";
+        console.log("Computer: Rock")
+        return "Rock";
     } else if (number === 1) {
-        console.log("C0mput3rs race: paper")
-        return "paper";
+        console.log("Computer: Paper")
+        return "Paper";
     } else if (number === 2) {
-        console.log("C0mput3rs race: scissors")
-        return "scissors";
+        console.log("Computer: Scissors")
+        return "Scissors";
     }
 }
 
 function getHumanChoice() {
     let choice = prompt("Paper, Rock or Scissors?");
-    choice = choice.toLowerCase();
+    choice = choice.charAt(0).toUpperCase() + choice.slice(1).toLowerCase();
 
-    if (choice === "rock") {
-        console.log("Human race: rock")
-        return "rock";
-    } else if (choice === "paper") {
-        console.log("Human race: paper")
-        return "paper";
-    } else if (choice === "scissors") {
-        console.log("Human race: scissors")
-        return "scissors";
+    if (choice === "Rock") {
+        console.log("You: Rock")
+        return "Rock";
+    } else if (choice === "Paper") {
+        console.log("You: Paper")
+        return "Paper";
+    } else if (choice === "Scissors") {
+        console.log("You: Scissors")
+        return "Scissors";
     }
 }
 
-let humanScore = 0;
-let computerScore = 0;
-
 function playRound(humanChoice, computerChoice) {
-    if (humanChoice === "rock" && computerChoice === "scissors") {
-        console.log("Human wins! " + humanChoice + " beats " + computerChoice + "\nPoint to human race");
+    if (humanChoice === "Rock" && computerChoice === "Scissors") {
+        console.log("You win this round!\n" + humanChoice + " beats " + computerChoice + "\nPoint for you");
         humanScore++;
-    } else if (humanChoice === "paper" && computerChoice === "rock") {
-        console.log("Human wins! " + humanChoice + " beats " + computerChoice + "\nPoint to human race");
+    } else if (humanChoice === "Paper" && computerChoice === "Rock") {
+        console.log("You win this round!\n" + humanChoice + " beats " + computerChoice + "\nPoint for you");
         humanScore++;
-    } else if (humanChoice === "scissors" && computerChoice === "paper") {
-        console.log("Human wins! " + humanChoice + " beats " + computerChoice + "\nPoint to human race");
+    } else if (humanChoice === "Scissors" && computerChoice === "Paper") {
+        console.log("You win this round!\n" + humanChoice + " beats " + computerChoice + "\nPoint for you");
         humanScore++;
-    } else if (humanChoice == computerChoice) {
-        console.log("Draw! " + "\nNo points were awarded");
+    } else if (humanChoice === computerChoice) {
+        console.log("Draw!" + "\nNo points were designated");
     } else {
-        console.log("C0mput3rs race wins! " + computerChoice + " beats " + humanChoice + "\nPoint to c0mput3rs race");
+        console.log("Computer wins this round!\n" + computerChoice + " beats " + humanChoice + " \nPoint for Computer");
         computerScore++;
     }
-    console.log(humanScore, computerScore)
+    console.log("Current match result: " + humanScore + " - " + computerScore + "\n\n");
 }
 
 function playGame() {
+    console.log("Rock Paper Scissors Game!\n\n");
     for (let i = 0; i < 5; i++) {
         let humanSelection = getHumanChoice();
         let computerSelection = getComputerChoice();
@@ -59,15 +60,15 @@ function playGame() {
     }
 
     if (humanScore > computerScore) {
-        console.log("Human race wins tournament")
+        console.log('%c You win this tournament! ', 'background: #222; color: #bada55')
     }
 
     else if (humanScore === computerScore) {
-        console.log("DRAW!!!")
+        console.log('%c Draw, nobody wins this tournament! ', 'background: #222; color: #ffff00')
     }
 
     else {
-        console.log("C0mput3rs race wins tournament")
+        console.log('%c Computer wins this tournament! ', 'background: #222; color: #ff4500')
     }
 }
 
