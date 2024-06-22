@@ -8,6 +8,12 @@ Welcome to the **Rock Paper Scissors Game**! This simple, classic game lets you 
 2. Follow the prompts to enter your choices 🗳️.
 3. Play five rounds against the computer and see who comes out on top! 🏆
 
+Alternatively, you can access the game directly on GitHub Pages from my repository:
+
+- Visit the [GitHub Pages of the game](https://t3ac0d3.github.io/rock-paper-scissors/) to play it online.
+
+This link will take users directly to the hosted version of your game, making it easily accessible without the need for local setup.
+
 ## 📂 Project Structure
 
 - **index.html**: Loads the game 🎮.
