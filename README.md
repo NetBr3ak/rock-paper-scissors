@@ -1,6 +1,6 @@
 # 🪨📄✂️ Rock Paper Scissors Game
 
-Welcome to the **Rock Paper Scissors Game**! This simple, classic game lets you challenge the computer in a fun and interactive way using HTML and JavaScript. Get ready for some friendly competition!
+Welcome to the **Rock Paper Scissors Game**! This simple, classic game lets you challenge the computer in a fun and interactive way using HTML and JavaScript. Get ready for some competition!
 
 ## 🚀 Getting Started
 
@@ -74,8 +74,6 @@ To contribute, fork the repository and submit a pull request. Your suggestions a
 This project is open-source under the MIT License.
 
 ---
-
-Enjoy the game and may the best player win! 🎮💥
 
 ### Author
 
