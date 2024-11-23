@@ -10,7 +10,7 @@ Welcome to the **Rock Paper Scissors Game**! This simple, classic game lets you 
 
 Alternatively, you can access the game directly on GitHub Pages from my repository:
 
-- Visit the [GitHub Pages of the game](https://t3ac0d3.github.io/rock-paper-scissors/) to play it online.
+- Visit the [GitHub Pages of the game](https://NetBr3ak.github.io/rock-paper-scissors/) to play it online.
 
 This link will take users directly to the hosted version of your game, making it easily accessible without the need for local setup.
 
